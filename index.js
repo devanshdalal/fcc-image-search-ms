@@ -75,14 +75,19 @@ app.get('/api/imagesearch/:QUERY', function (req, res) {
     if( !isNaN(page_value) )offset=page_value;
   }
   
+  console.log('offset',offset,entries*(offset-1));
   Bing.images( query , {
-    top: entries,   // Number of results (max 50) 
-    skip: entries*(offset-1),// Skip first offset-1 pages
+    top: entries*offset,//entries,   // Number of results (max 50) 
+    // skip: entries*(offset-1),// Skip first offset-1 pages
     adult: 'Off'
-  }, function(error, respone, body){
+  }, function(error, response, body){
     if(error)console.error(error);
+    // for (var i in response) {
+    //   console.log('response',i);
+    // }
     // console.log('bing image search res:',body.value);
     var results = new Array();
+    body.value=body.value.slice(entries*(offset-1),entries*offset);
     for (var image in body.value) {
       var link=body.value[image];
       var obj={
