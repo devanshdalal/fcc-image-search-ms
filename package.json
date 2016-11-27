@@ -1,0 +1,28 @@
+{
+  "name": "image-search-layer",
+  "version": "0.2.5",
+  "description": "A sample Node.js app using Express ",
+  "engines": {
+    "node": "5.9.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "2.4.1",
+    "express": "4.13.3",
+    "mongodb": "2.2.1",
+    "node-bing-api":"3.0.1" 
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
