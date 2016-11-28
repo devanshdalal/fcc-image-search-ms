@@ -14,4 +14,4 @@ to see the latest search, use the api: .../api/latest/imagesearch. I modified a 
 
 ##Live Site:
 A live demo is available on Heroku
-<a href="https://paltry.herokuapp.com/">https://paltry.herokuapp.com/</a>
+<a href="https://fcc-image-search-ms.herokuapp.com/">https://paltry.herokuapp.com/</a>
